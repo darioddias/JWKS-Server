@@ -7,19 +7,19 @@ CSCE 3550
 
 This Python application implements a RESTful JWKS server that provides public keys for verifying JSON Web Tokens (JWTs). It includes key expiry for enhanced security and handles the issuance of JWTs with expired keys based on a query parameter.
 
-#Installation:
+# Installation:
 
 Create a virtual environment:
    python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-2. **Install dependencies:**
+Install dependencies:
 ```bash
 pip install   
  Flask cryptography jwt
 
 
-#Usage:
+# Usage:
 
 Run the server:
 python jwks_server.py
@@ -31,7 +31,7 @@ Test the authentication endpoint:
 curl -X POST http://localhost:5000/auth -d '{"username": "john_doe"}'
 
 
-Endpoints:
+# Endpoints:
 
 /jwks: Returns a JSON Web Key Set (JWKS) containing public keys and their expiration times.
 
