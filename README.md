@@ -1,39 +1,29 @@
-# JWKS-Server
+# JWT Authentication Server
 
-Dario Dias 
-dkd0102
-CSCE 3550
-
-
-This Python application implements a RESTful JWKS server that provides public keys for verifying JSON Web Tokens (JWTs). It includes key expiry for enhanced security and handles the issuance of JWTs with expired keys based on a query parameter.
-
-# Installation:
-
-Create a virtual environment:
-   python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-Install dependencies:
-
-```bash
-pip install   
- Flask cryptography jwt
+## Overview
+This project implements a simple HTTP server that handles JWT (JSON Web Token) authentication. The server generates and serves JWTs using RSA keys stored in an SQLite database. It provides endpoints for obtaining tokens and for retrieving public keys in JWK (JSON Web Key) format.
 
 
-Usage:
-
-Run the server:
-python jwks_server.py
-
-Test the JWKS endpoint:
-curl http://localhost:5000/jwks
-
-Test the authentication endpoint:
-curl -X POST http://localhost:5000/auth -d '{"username": "john_doe"}'
+## TEST CLIENT SS
+![image](https://github.com/user-attachments/assets/657266fe-3621-4c9e-ac24-56e853753863)
 
 
-Endpoints:
+## Features
+- **JWT Authentication**: Generates JWTs for authenticated users.
+- **Key Management**: Stores RSA private keys in an SQLite database, including both valid and expired keys.
+- **JWKS Endpoint**: Exposes a well-known endpoint to retrieve the public keys in JWK format.
 
-/jwks: Returns a JSON Web Key Set (JWKS) containing public keys and their expiration times.
+## Technologies Used
+- Python 3.x
+- HTTPServer from the `http.server` module
+- `cryptography` for key management
+- `sqlite3` for database operations
+- `jwt` for token generation
+- `base64` for encoding
 
-/auth: Authenticates a user (mock authentication is used for this example) and issues a JWT signed with a chosen key. The expired query parameter determines whether an expired key is used.
+## Requirements
+To run this project, you need to install the following Python packages:
+
+```plaintext
+cryptography==41.0.4
+pyjwt==2.8.0
