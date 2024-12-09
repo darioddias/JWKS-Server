@@ -5,7 +5,7 @@ This project implements a simple HTTP server that handles JWT (JSON Web Token) a
 
 
 ## TEST CLIENT SS
-![image](https://github.com/user-attachments/assets/d435a7cb-17a2-41de-8782-f5aacbc96b70)
+![image](https://github.com/user-attachments/assets/28eb1a94-402f-44b0-91ad-c5401f05debd)
 
 
 
