@@ -4,8 +4,7 @@
 This project implements a simple HTTP server that handles JWT (JSON Web Token) authentication. The server generates and serves JWTs using RSA keys stored in an SQLite database. It provides endpoints for obtaining tokens and for retrieving public keys in JWK (JSON Web Key) format.
 
 
-## TEST CLIENT SS
-![image](https://github.com/user-attachments/assets/28eb1a94-402f-44b0-91ad-c5401f05debd)
+## TEST CLIENT
 
 
 
